@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="{{ asset('css/pages/home.css') }}">
     </x-slot>
    {{-- Hero section --}}
-   <section id="hero" class="py-36 bg-gray-700">
+   <section id="hero" class="py-36">
         <div class="container mx-auto">
             <div class="text-center text-white mb-10">
                 <h1 class="title1">Construire un monde meilleur, un étudiant à la fois</h1>

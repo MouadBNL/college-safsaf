@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   purge: [
@@ -8,6 +10,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        'primary': colors.blue,
+      },
       fontFamily: {
         'lato': ['"Lato"', 'ui-sans-serif', 'system-ui', 'san-serif'],
       },

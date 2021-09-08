@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ $title ?? 'College Safsaf' }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +12,11 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/tw.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     </head>
     <body class="font-lato antialiased">
+        <x-base.header/>
         {{ $slot }}
     </body>
 </html>

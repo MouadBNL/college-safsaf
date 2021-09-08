@@ -13,10 +13,16 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/tw.css') }}">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        {{ $css ?? '' }}
 
     </head>
-    <body class="font-lato antialiased">
+    <body class="font-lato antialiased text-lg">
         <x-base.header/>
+
         {{ $slot }}
+
+        {{-- footer --}}
+
+        {{ $js ?? '' }}
     </body>
 </html>

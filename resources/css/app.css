@@ -20,10 +20,6 @@
     opacity: 1;
   }
   
-  .hamburger:hover [class*="-bun"] {
-    @apply bg-primary;
-  }
-  
   .hamburger__top-bun {
     transform: translateY(-5px);
   }

@@ -15,4 +15,5 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css')
     .postCss('resources/css/tw.css', 'public/css', [
         require('tailwindcss')
-    ]);
+    ])
+    .sass('resources/css/pages/home.scss', 'public/css/pages');

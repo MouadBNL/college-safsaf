@@ -83,7 +83,7 @@
                 <div class="flex">
                     {{-- PREV --}}
                     <a href="#" class="mx-2">
-                        <span class="w-8 h-8 rounded-md bg-primary-500 flex items-center justify-center">
+                        <span class="w-8 h-8 transition rounded-md bg-primary-500 hover:bg-primary-600 flex items-center justify-center">
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 1L1 7L7 13" stroke="#DCDCDC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>                                
@@ -92,22 +92,22 @@
 
 
                     <a href="#" class="mx-2">
-                        <span class="w-8 h-8 rounded-md bg-gray-50 flex items-center justify-center">
+                        <span class="w-8 h-8 transition rounded-md bg-gray-50 hover:bg-gray-200 flex items-center justify-center">
                             1                             
                         </span>
                     </a>
                     <a href="#" class="mx-2">
-                        <span class="w-8 h-8 rounded-md bg-gray-50 flex items-center justify-center">
+                        <span class="w-8 h-8 transition rounded-md bg-gray-50 hover:bg-gray-200 flex items-center justify-center">
                             2                         
                         </span>
                     </a>
                     <a href="#" class="mx-2">
-                        <span class="w-8 h-8 rounded-md bg-gray-50 flex items-center justify-center">
+                        <span class="w-8 h-8 transition rounded-md bg-gray-50 hover:bg-gray-200 flex items-center justify-center">
                             3                           
                         </span>
                     </a>
                     <a href="#" class="mx-2">
-                        <span class="w-8 h-8 rounded-md bg-gray-50 flex items-center justify-center">
+                        <span class="w-8 h-8 transition rounded-md bg-gray-50 hover:bg-gray-200 flex items-center justify-center">
                             4                            
                         </span>
                     </a>
@@ -115,7 +115,7 @@
 
                     {{-- NEXT --}}
                     <a href="#" class="mx-2">
-                        <span class="w-8 h-8 rounded-md bg-primary-500 flex items-center justify-center">
+                        <span class="w-8 h-8 transition rounded-md bg-primary-500 hover:bg-primary-600 flex items-center justify-center">
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L7 7L1 1" stroke="#DCDCDC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>

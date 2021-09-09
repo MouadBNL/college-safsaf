@@ -631,9 +631,6 @@ video {
 .mb-2 {
 	margin-bottom: 0.5rem;
 }
-.mb-6 {
-	margin-bottom: 1.5rem;
-}
 .block {
 	display: block;
 }
@@ -646,26 +643,20 @@ video {
 .hidden {
 	display: none;
 }
-.h-full {
-	height: 100%;
-}
-.h-16 {
-	height: 4rem;
-}
 .h-8 {
 	height: 2rem;
+}
+.h-full {
+	height: 100%;
 }
 .w-full {
 	width: 100%;
 }
-.w-2\/3 {
-	width: 66.666667%;
-}
-.w-16 {
-	width: 4rem;
-}
 .w-8 {
 	width: 2rem;
+}
+.w-2\/3 {
+	width: 66.666667%;
 }
 .grid-cols-1 {
 	grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -688,14 +679,11 @@ video {
 .justify-between {
 	justify-content: space-between;
 }
-.gap-6 {
-	gap: 1.5rem;
+.gap-8 {
+	gap: 2rem;
 }
 .gap-4 {
 	gap: 1rem;
-}
-.gap-8 {
-	gap: 2rem;
 }
 .self-start {
 	align-self: flex-start;
@@ -716,6 +704,14 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
 }
+.bg-primary-500 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+.bg-gray-50 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
 .bg-primary-900 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(30, 58, 138, var(--tw-bg-opacity));
@@ -726,14 +722,6 @@ video {
 }
 .bg-transparent {
 	background-color: transparent;
-}
-.bg-primary-500 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
-}
-.bg-gray-50 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
 .fill-current {
 	fill: currentColor;
@@ -785,13 +773,13 @@ video {
 	font-size: 1.125rem;
 	line-height: 1.75rem;
 }
-.text-xl {
-	font-size: 1.25rem;
-	line-height: 1.75rem;
-}
 .text-base {
 	font-size: 1rem;
 	line-height: 1.5rem;
+}
+.text-xl {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 }
 .font-extrabold {
 	font-weight: 800;
@@ -809,6 +797,10 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(59, 130, 246, var(--tw-text-opacity));
 }
+.text-gray-600 {
+	--tw-text-opacity: 1;
+	color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
 .text-white {
 	--tw-text-opacity: 1;
 	color: rgba(255, 255, 255, var(--tw-text-opacity));
@@ -816,10 +808,6 @@ video {
 .text-gray-500 {
 	--tw-text-opacity: 1;
 	color: rgba(107, 114, 128, var(--tw-text-opacity));
-}
-.text-gray-600 {
-	--tw-text-opacity: 1;
-	color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
 .no-underline {
 	text-decoration: none;
@@ -852,9 +840,6 @@ video {
 .ratio-720{
             padding-bottom: 56.25%;
         }
-.ratio-sqr{
-            padding-bottom: 100%;
-        }
 /* Titles */
 .title1 {
 	font-size: 2.25rem;
@@ -878,6 +863,9 @@ video {
 	padding-bottom: 0.25rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
 }
 @media (min-width: 1024px) {
 
@@ -901,6 +889,9 @@ video {
 	padding-bottom: 0.25rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
 }
 @media (min-width: 1024px) {
 
@@ -924,14 +915,19 @@ p {
 	color: rgba(55, 65, 81, var(--tw-text-opacity));
 }
 
-.hover\:bg-gray-50:hover {
-	--tw-bg-opacity: 1;
-	background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
-}
-
 .hover\:bg-primary-600:hover {
 	--tw-bg-opacity: 1;
 	background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-200:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-50:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -997,12 +993,12 @@ p {
 		flex: none;
 	}
 
-	.lg\:grid-cols-4 {
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-	}
-
 	.lg\:grid-cols-3 {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.lg\:grid-cols-4 {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 
 	.lg\:flex-row {
@@ -1032,10 +1028,6 @@ p {
 
 	.xl\:grid-cols-4 {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
-	}
-
-	.xl\:gap-8 {
-		gap: 2rem;
 	}
 
 	.xl\:gap-6 {

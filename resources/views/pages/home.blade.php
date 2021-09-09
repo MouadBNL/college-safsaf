@@ -20,8 +20,11 @@
    {{-- presentation --}}
    <section class="py-16">
        <div class="container mx-auto lg:flex gap-4 p-4">
-            <div class="mb-4 lg:mb-0">
-                <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-photo-183042379.jpg" alt="Directeur">
+            <div class="mb-4 lg:mb-0 w-1/2 mx-auto lg:w-1/3">
+                {{-- <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-photo-183042379.jpg" alt="Directeur"> --}}
+                <div class="w-full relative ratio-sqr bg-gray-400 rounded-md mb-3">
+                    {{-- <img src="{{ $image->url }}" alt="Parking" class="object-cover absolute-full rounded shadow-md"> --}}
+                </div>
             </div>
 
             <div class="flex items-center">

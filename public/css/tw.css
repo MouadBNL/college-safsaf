@@ -914,6 +914,10 @@ p {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
+	.md\:grid-cols-2 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
 	.md\:py-4 {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
@@ -985,5 +989,16 @@ p {
 
 	.lg\:pb-0 {
 		padding-bottom: 0px;
+	}
+}
+
+@media (min-width: 1280px) {
+
+	.xl\:grid {
+		display: grid;
+	}
+
+	.xl\:grid-cols-4 {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 }

@@ -21,7 +21,7 @@
 
         {{ $slot }}
 
-        {{-- footer --}}
+        <x-base.footer/>
 
         {{ $js ?? '' }}
     </body>

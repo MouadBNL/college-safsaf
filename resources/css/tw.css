@@ -4,12 +4,27 @@
 
 
 @layer utilities {
+    /* Ratios */
+    @variants responsive {
+      
+        .ratio-720{
+            padding-bottom: 56.25%;
+        }
+        .ratio-sqr{
+            padding-bottom: 100%;
+        }
+
+    }
+
     /* Titles */
     .title1 {
         @apply text-4xl font-extrabold;
     }
     .title2 {
         @apply text-3xl font-extrabold;
+    }
+    .title3 {
+        @apply text-2xl font-bold;
     }
     
 

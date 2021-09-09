@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::get('/activites', function () {
     return view('pages.activities');
 })->name('activities');
+
+
+Route::get('/resources', function () {
+    return view('pages.resources');
+})->name('resources');

@@ -13,6 +13,11 @@
         .ratio-sqr{
             padding-bottom: 100%;
         }
+        
+        .absolute-full{
+            @apply absolute top-0 left-0 w-full h-full;
+        }
+        
 
     }
 

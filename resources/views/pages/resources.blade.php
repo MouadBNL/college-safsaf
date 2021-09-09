@@ -77,7 +77,7 @@
                                                 </svg>
                                             </div>
         
-                                            <h3 class="title3 text-white">Course Title 101</h3>
+                                            <h3 class="title3 text-white">Course Title {{ $i }}</h3>
                                             <p class="text-white">Imperdiet et eget enim non sit.</p>
                                             <p class="text-white">Math</p>
                                         </div>

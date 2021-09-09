@@ -34,7 +34,7 @@
                 font-semibold hover:text-primary text-base w-full no-underline lg:w-auto md:px-4 py-0 md:py-1 md:mx-2 rounded-lg 
                 bg-transparent hover:bg-gray-50 transition
                 "
-                    href="#">Activités
+                    href="{{ route('activities') }}">Activités
                 </a>
 
                  <a class="

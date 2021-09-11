@@ -33,6 +33,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.activity.fields.description') }}
+                        </th>
+                        <td>
+                            {!! $activity->description !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.resource.fields.type') }}
                         </th>
                         <td>

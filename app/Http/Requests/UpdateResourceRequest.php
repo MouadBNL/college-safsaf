@@ -21,6 +21,9 @@ class UpdateResourceRequest extends FormRequest
                 'string',
                 'required',
             ],
+            'description' => [
+                'string',
+            ],
             'type' => [
                 'required',
             ],

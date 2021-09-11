@@ -11,6 +11,7 @@ class CreateResourcesTable extends Migration
         Schema::create('resources', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
+            $table->string('description')->nullable();
             $table->string('type');
             $table->string('link')->nullable();
             $table->timestamps();

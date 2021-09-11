@@ -37,6 +37,7 @@ class Resource extends Model implements HasMedia
 
     protected $fillable = [
         'title',
+        'description',
         'type',
         'link',
         'created_at',

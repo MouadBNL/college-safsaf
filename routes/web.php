@@ -27,6 +27,7 @@ Route::get('/resources', function () {
 
 
 Route::get('/activites', [ActivityController::class, 'index'])->name('activities');
+Route::get('/activites/{activity}', [ActivityController::class, 'show'])->name('activities.show');
 
 
 Auth::routes(['register' => false]);

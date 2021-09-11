@@ -17,4 +17,11 @@ class ActivityController extends Controller
             'latest', 'posts'
         ]));
     }
+
+    public function show(Activity $activity)
+    {
+        return view('pages.activities.show', compact([
+            'activity'
+        ]));
+    }
 }

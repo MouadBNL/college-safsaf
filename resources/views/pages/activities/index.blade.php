@@ -63,7 +63,7 @@
                         </div> --}}
 
                         <div>
-                            <a class="btn-primary" href="#">Voir plus</a>
+                            <a class="btn-primary" href="{{ route('activities.show', $post) }}">Voir plus</a>
                         </div>
 
                     </article>

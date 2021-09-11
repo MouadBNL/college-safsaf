@@ -1,6 +1,8 @@
 <x-layouts.base>
     <x-slot name="css">
-        <link rel="stylesheet" href="{{ asset('css/pages/home.css') }}">
+        <div>
+            <link rel="stylesheet" href="{{ asset('css/pages/home.css') }}">
+        </div>
     </x-slot>
    {{-- Hero section --}}
    <section id="hero" class="py-36">

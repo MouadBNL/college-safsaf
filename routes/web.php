@@ -1,13 +1,33 @@
 <?php
 
-Route::redirect('/', '/login');
-Route::get('/home', function () {
-    if (session('status')) {
-        return redirect()->route('admin.home')->with('status', session('status'));
-    }
+use App\Http\Controllers\ActivityController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
-    return redirect()->route('admin.home');
-});
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('pages.home');
+})->name('home');
+
+Route::get('/resources', function () {
+    return view('pages.resources');
+})->name('resources');
+
+
+
+
+Route::get('/activites', [ActivityController::class, 'index'])->name('activities');
+
 
 Auth::routes(['register' => false]);
 

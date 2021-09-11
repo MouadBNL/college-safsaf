@@ -1,1 +1,1 @@
-.hamburger{cursor:pointer;height:48px;transition:all .25s;width:48px}.hamburger__bottom-bun,.hamburger__middle-bun,.hamburger__top-bun{background:#000;content:"";height:2px;opacity:1;position:absolute;transform:rotate(0);transition:all .5s;width:24px}.hamburger__top-bun{transform:translateY(-5px)}.hamburger__bottom-bun{transform:translateY(5px)}.open{transform:rotate(90deg);transform:translateY(-1px)}.open .hamburger__top-bun{transform:rotate(45deg) translateY(0)}.open .hamburger__bottom-bun{transform:rotate(-45deg) translateY(0)}.open .hamburger__middle-bun{opacity:0}
+

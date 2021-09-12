@@ -24,7 +24,11 @@ Route::get('/activites', [ActivityController::class, 'index'])->name('activities
 Route::get('/activites/{activity}', [ActivityController::class, 'show'])->name('activities.show');
 
 
-Route::get('/resources', [ResourceController::class, 'index'])->name('resources');
+// Route::get('/resources', [ResourceController::class, 'index'])->name('resources');
+Route::get('/resources', function(){
+    return view('pages.resources');
+})->name('resources');
+Route::get('/resources/{level}/{subject}', [ResourceController::class, 'list'])->name('resources.list');
 Route::get('/resources/{resource}', [ResourceController::class, 'show'])->name('resources.show');
 
 

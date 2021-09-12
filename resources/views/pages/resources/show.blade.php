@@ -33,6 +33,7 @@
                     <div class="w-full lg:w-1/2">
                         <h3 class="title3">Fichier</h3>
                         <section>
+                            @if( $resource->file)
                             <a href="{{ $resource->file->getUrl() }}" class="btn-primary flex justify-between my-2">
                                 <span>
                                     {{ \Illuminate\Support\Str::limit($resource->file->name, 20, $end = '...') }}
@@ -41,6 +42,9 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg>
                             </a>
+                            @else
+                                <p>Il n'y a pas de fichier</p>
+                            @endif
                         </section>
                     </div>
                     <div class="w-full lg:w-1/2">

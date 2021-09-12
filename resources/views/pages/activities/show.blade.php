@@ -4,7 +4,7 @@
             <div class="flex gap-4">
                 <div class="w-full xl:w-2/3">
                     <div class="w-full relative ratio-720 bg-gray-400 rounded-md mb-3">
-                        <img src="{{ $activity->image ? $activity->image->url : '#' }}" alt="Parking" class="object-cover absolute-full rounded shadow-md">
+                        <img src="{{ $activity->image ? $activity->image->url : '#' }}" alt="Image" class="object-cover absolute-full rounded shadow-md">
                     </div>
                     <h2 class="title2 text-primary-500 mb-3">{{ $activity->title }}</h2>
                     <article>

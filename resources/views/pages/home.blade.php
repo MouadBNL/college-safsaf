@@ -25,7 +25,7 @@
             <div class="mb-4 lg:mb-0 w-1/2 mx-auto lg:w-1/3">
                 {{-- <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-photo-183042379.jpg" alt="Directeur"> --}}
                 <div class="w-full relative ratio-sqr bg-gray-400 rounded-md mb-3">
-                    {{-- <img src="{{ $image->url }}" alt="Parking" class="object-cover absolute-full rounded shadow-md"> --}}
+                    {{-- <img src="{{ $image->url }}" alt="Image" class="object-cover absolute-full rounded shadow-md"> --}}
                 </div>
             </div>
 
@@ -127,7 +127,7 @@
 
                 <article class="w-full p-4">
                     <div class="relative ratio-720 bg-gray-400 rounded-md mb-3">
-                        {{-- <img src="{{ $image->url }}" alt="Parking" class="object-cover absolute-full rounded shadow-md"> --}}
+                        {{-- <img src="{{ $image->url }}" alt="Image" class="object-cover absolute-full rounded shadow-md"> --}}
                     </div>
 
                     <h3 class="title3 mb-3">Parturient molestie lectus natoque adipiscing ut sed.</h3>
@@ -139,7 +139,7 @@
 
                 <article class="w-full p-4">
                     <div class="relative ratio-720 bg-gray-400 rounded-md mb-3">
-                        {{-- <img src="{{ $image->url }}" alt="Parking" class="object-cover absolute-full rounded shadow-md"> --}}
+                        {{-- <img src="{{ $image->url }}" alt="Image" class="object-cover absolute-full rounded shadow-md"> --}}
                     </div>
 
                     <h3 class="title3 mb-3">Parturient molestie lectus natoque adipiscing ut sed.</h3>
@@ -151,7 +151,7 @@
 
                 <article class="w-full p-4">
                     <div class="relative ratio-720 bg-gray-400 rounded-md mb-3">
-                        {{-- <img src="{{ $image->url }}" alt="Parking" class="object-cover absolute-full rounded shadow-md"> --}}
+                        {{-- <img src="{{ $image->url }}" alt="Image" class="object-cover absolute-full rounded shadow-md"> --}}
                     </div>
 
                     <h3 class="title3 mb-3">Parturient molestie lectus natoque adipiscing ut sed.</h3>

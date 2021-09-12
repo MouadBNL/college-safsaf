@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\ResourceController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -19,15 +20,11 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('home');
 
-Route::get('/resources', function () {
-    return view('pages.resources');
-})->name('resources');
-
-
-
-
 Route::get('/activites', [ActivityController::class, 'index'])->name('activities');
 Route::get('/activites/{activity}', [ActivityController::class, 'show'])->name('activities.show');
+
+
+Route::get('/resources', [ResourceController::class, 'index'])->name('resources');
 
 
 Auth::routes(['register' => false]);

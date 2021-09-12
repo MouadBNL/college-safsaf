@@ -10,6 +10,9 @@ class CreateResourcesTable extends Migration
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('lesson_id');
             $table->string('title');
             $table->string('description')->nullable();
             $table->string('type');

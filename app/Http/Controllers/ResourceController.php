@@ -9,9 +9,14 @@ class ResourceController extends Controller
 {
     public function index()
     {
-        $resources = Resource::paginate(24);
+        $resources = Resource::latest()->paginate(24);
         return view('pages.resources.index',  compact([
             'resources'
         ]));
+    }
+
+    public function show(Resource $resource)
+    {
+        return view('pages.resources.show', compact('resource'));
     }
 }

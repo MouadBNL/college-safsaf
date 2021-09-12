@@ -45,6 +45,20 @@
                 <span class="help-block">{{ trans('cruds.resource.fields.type_helper') }}</span>
             </div>
             <div class="form-group">
+                <label class="required" for="lesson_id">Leçon</label>
+                <select class="form-control select2 {{ $errors->has('lesson') ? 'is-invalid' : '' }}" name="lesson_id" id="lesson_id" required>
+                    @foreach($lessons as $id => $entry)
+                        <option value="{{ $id }}" {{ old('lesson_id') == $id ? 'selected' : '' }}>{{ $entry }}</option>
+                    @endforeach
+                </select>
+                @if($errors->has('lesson'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('lesson') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.lesson.fields.subject_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <label for="file">{{ trans('cruds.resource.fields.file') }}</label>
                 <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="file-dropzone">
                 </div>

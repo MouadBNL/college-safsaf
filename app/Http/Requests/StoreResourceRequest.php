@@ -27,6 +27,10 @@ class StoreResourceRequest extends FormRequest
             'type' => [
                 'required',
             ],
+            'lesson_id' => [
+                'required',
+                'integer',
+            ],
             'link' => [
                 'string',
                 'nullable',

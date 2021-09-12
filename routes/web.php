@@ -25,6 +25,7 @@ Route::get('/activites/{activity}', [ActivityController::class, 'show'])->name('
 
 
 Route::get('/resources', [ResourceController::class, 'index'])->name('resources');
+Route::get('/resources/{resource}', [ResourceController::class, 'show'])->name('resources.show');
 
 
 Auth::routes(['register' => false]);

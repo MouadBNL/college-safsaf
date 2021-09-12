@@ -7,6 +7,7 @@ use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyResourceRequest;
 use App\Http\Requests\StoreResourceRequest;
 use App\Http\Requests\UpdateResourceRequest;
+use App\Models\Lesson;
 use App\Models\Resource;
 use Gate;
 use Illuminate\Http\Request;
@@ -30,12 +31,16 @@ class ResourceController extends Controller
     {
         abort_if(Gate::denies('resource_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.resources.create');
+        $lessons = Lesson::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        return view('admin.resources.create', compact('lessons'));
     }
 
     public function store(StoreResourceRequest $request)
     {
-        $resource = Resource::create($request->all());
+        $data = $request->all();
+        $data['user_id'] = auth()->user()->id;
+        $resource = Resource::create($data);
 
         if ($request->input('file', false)) {
             $resource->addMedia(storage_path('tmp/uploads/' . basename($request->input('file'))))->toMediaCollection('file');
@@ -52,7 +57,9 @@ class ResourceController extends Controller
     {
         abort_if(Gate::denies('resource_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.resources.edit', compact('resource'));
+        $lessons = Lesson::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        return view('admin.resources.edit', compact('resource', 'lessons'));
     }
 
     public function update(UpdateResourceRequest $request, Resource $resource)

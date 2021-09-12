@@ -67,12 +67,12 @@
                         </style>
                         @foreach ($resources as $resource)
                             <article class="resource">
-                                <a href="#">
+                                <a href="{{ route('resources.show', $resource) }}">
                                     <div class="w-full relative ratio-720 bg-gray-400 rounded-md mb-3 overflow-hidden">
                                         <img src="{{ $resource->getImage() }}" alt="Image" class="object-cover absolute-full rounded shadow-md">
                                         <div class="absolute-full bg-black bg-opacity-60 flex items-center">
                                             <div class="p-4">
-                                                <div class="h-16">
+                                                <div class="h-16 text-white">
                                                     {!! $resource->getIcon() !!}
                                                 </div>
             

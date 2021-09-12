@@ -25,6 +25,14 @@
                     </tr>
                     <tr>
                         <th>
+                            Auteur
+                        </th>
+                        <td>
+                            {{ $resource->user->name ?? '' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.resource.fields.title') }}
                         </th>
                         <td>
@@ -36,7 +44,7 @@
                             {{ trans('cruds.activity.fields.description') }}
                         </th>
                         <td>
-                            {!! $activity->description !!}
+                            {!! $resource->description !!}
                         </td>
                     </tr>
                     <tr>
@@ -45,6 +53,14 @@
                         </th>
                         <td>
                             {{ App\Models\Resource::TYPE_SELECT[$resource->type] ?? '' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Leçon
+                        </th>
+                        <td>
+                            {{ $resource->lesson->title ?? '' }}
                         </td>
                     </tr>
                     <tr>

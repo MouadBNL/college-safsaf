@@ -20,7 +20,7 @@ class ImageSeeder extends Seeder
                 'label' => 'Hero image'
             ],
             [
-                'uuid' => 'home.accueil',
+                'uuid' => 'home.desc',
                 'label' => 'accueil decription'
             ]
         ];

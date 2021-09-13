@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label for="content">{{ trans('cruds.text.fields.content') }}</label>
-                <textarea class="form-control ckeditor {{ $errors->has('content') ? 'is-invalid' : '' }}" name="content" id="content">{!! old('content', $text->content) !!}</textarea>
+                <textarea class="form-control {{ $text->editor ? 'ckeditor' : '' }} {{ $errors->has('content') ? 'is-invalid' : '' }}" name="content" id="content">{!! old('content', $text->content) !!}</textarea>
                 @if($errors->has('content'))
                     <div class="invalid-feedback">
                         {{ $errors->first('content') }}

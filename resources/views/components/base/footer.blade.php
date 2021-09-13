@@ -11,14 +11,14 @@
                 </svg>  
                     
                 <p class="text-white">
-                    1234 Sample. Street, Example State 35624
+                    {!! get_text('footer.1') !!}
                 </p>
             </div>
 
             
             <div class="text-white">
     
-                <h2 class="title2 text-white mb-3">Quick Links</h2>
+                <h2 class="title2 text-white mb-3">{!! get_text('footer.2') !!}</h2>
                 
                 <ul class="text-white text-xl">
                     <li>Home</li>
@@ -31,7 +31,7 @@
             
             <div class="text-white">
     
-                <h2 class="title2 text-white mb-3">Quick Links</h2>
+                <h2 class="title2 text-white mb-3">{!! get_text('footer.3') !!}</h2>
                 
                 <ul class="text-white text-xl">
                     <li>Home</li>
@@ -44,7 +44,7 @@
             
             <div class="text-white">
     
-                <h2 class="title2 text-white mb-3">Quick Links</h2>
+                <h2 class="title2 text-white mb-3">{!! get_text('footer.4') !!}</h2>
                 
                 <ul class="text-white text-xl">
                     <li>Home</li>

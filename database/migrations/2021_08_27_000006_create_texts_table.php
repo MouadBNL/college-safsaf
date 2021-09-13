@@ -12,6 +12,7 @@ class CreateTextsTable extends Migration
             $table->bigIncrements('id');
             $table->string('uuid')->nullable();
             $table->string('label')->unique();
+            $table->boolean('editor')->default(false);
             $table->longText('content')->nullable();
             $table->timestamps();
             $table->softDeletes();

@@ -8,12 +8,12 @@
    <section id="hero" class="py-36">
         <div class="container mx-auto p-4">
             <div class="text-center text-white mb-10">
-                <h1 class="title1">Construire un monde meilleur, un étudiant à la fois</h1>
-                <p class="text-xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi diam pharetra enim vivamus id consequat nibh. </p>
+                <h1 class="title1">{!! get_text('home.1') !!}</h1>
+                <p class="text-xl text-white">{!! get_text('home.2') !!}</p>
             </div>
             <div class="flex justify-center">
                 <a href="#" class="btn-primary">
-                    Voir nos resources
+                    {!! get_text('global.1') !!}
                 </a>
             </div>
         </div>
@@ -31,18 +31,13 @@
 
             <div class="flex items-center">
                 <div class="">
-                    <h2 class="title2 text-primary-500 mb-4">Porta nec, lacinia tellus ultricies</h2>
+                    <h2 class="title2 text-primary-500 mb-4">{!! get_text('home.3') !!}</h2>
                     <div class="mb-4">
-                        <p>
-                            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus consequat urna faucibus imperdiet et aliquam viverra. Porta nec, lacinia tellus ultricies quis interdum.
-                        </p> 
-                        <p>
-                            Egestas augue tristique amet, nullam nisl, tellus. Faucibus suspendisse lorem elit proin nulla tincidunt neque maecenas at. Quis ultrices ultrices euismod egestas morbi dictumst facilisis proin viverra”
-                        </p>
+                        {!! get_text('home.4') !!}
                     </div>
                     <div class="text-base text-gray-500">
-                        <span class="block font-extrabold">Wade Wilson</span>
-                        <span>Directeur</span>
+                        <span class="block font-extrabold">{!! get_text('home.5') !!}</span>
+                        <span>{!! get_text('home.6') !!}</span>
                     </div>
                 </div>
             </div>
@@ -52,7 +47,7 @@
    {{-- stats --}}
     <section class="pt-16 bg-primary-900">
         <div class="container mx-auto px-4">
-                <h2 class="title1 text-white text-center mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+                <h2 class="title1 text-white text-center mb-8">{!! get_text('home.7') !!}</h2>
 
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
@@ -65,7 +60,7 @@
                             </div>
                         </div>
                         <p class="text-center text-white font-bold text-xl">
-                            Eu sed arcu mattis nunc.
+                            {!! get_text('home.8') !!}
                         </p>
                     </div>
 
@@ -78,7 +73,7 @@
                             </div>
                         </div>
                         <p class="text-center text-white font-bold text-xl">
-                            Eu sed arcu mattis nunc.
+                            {!! get_text('home.9') !!}
                         </p>
                     </div>
 
@@ -91,7 +86,7 @@
                             </div>
                         </div>
                         <p class="text-center text-white font-bold text-xl">
-                            Eu sed arcu mattis nunc.
+                            {!! get_text('home.10') !!}
                         </p>
                     </div>
 
@@ -104,7 +99,7 @@
                             </div>
                         </div>
                         <p class="text-center text-white font-bold text-xl">
-                            Eu sed arcu mattis nunc.
+                            {!! get_text('home.11') !!}
                         </p>
                     </div>
                         
@@ -121,45 +116,25 @@
     {{-- Activities --}}
     <section class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="title1 text-white text-center mb-8">Nouvelles et Evènements</h2>
+            <h2 class="title1 text-primary-500 text-center mb-8">{!! get_text('home.12') !!}</h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-3">
 
-                <article class="w-full p-4">
-                    <div class="relative ratio-720 bg-gray-400 rounded-md mb-3">
-                        {{-- <img src="{{ $image->url }}" alt="Image" class="object-cover absolute-full rounded shadow-md"> --}}
-                    </div>
+                @forelse (\App\Models\Activity::latest()->take(3)->get() as $post)
+                    <article class="w-full p-4">
+                        <div class="relative ratio-720 bg-gray-400 rounded-md mb-3">
+                            <img src="{{ $post->image->url }}" alt="Image" class="object-cover absolute-full rounded shadow-md">
+                        </div>
 
-                    <h3 class="title3 mb-3">Parturient molestie lectus natoque adipiscing ut sed.</h3>
-                    <p class="mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus mauris, arcu congue semper varius cras tellus scelerisque. Nunc vitae egestas in tempus. Neque mollis.
-                    </p>
-                    <a class="btn-primary" href="#">Voir plus</a>
-                </article> 
-
-                <article class="w-full p-4">
-                    <div class="relative ratio-720 bg-gray-400 rounded-md mb-3">
-                        {{-- <img src="{{ $image->url }}" alt="Image" class="object-cover absolute-full rounded shadow-md"> --}}
-                    </div>
-
-                    <h3 class="title3 mb-3">Parturient molestie lectus natoque adipiscing ut sed.</h3>
-                    <p class="mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus mauris, arcu congue semper varius cras tellus scelerisque. Nunc vitae egestas in tempus. Neque mollis.
-                    </p>
-                    <a class="btn-primary" href="#">Voir plus</a>
-                </article> 
-
-                <article class="w-full p-4">
-                    <div class="relative ratio-720 bg-gray-400 rounded-md mb-3">
-                        {{-- <img src="{{ $image->url }}" alt="Image" class="object-cover absolute-full rounded shadow-md"> --}}
-                    </div>
-
-                    <h3 class="title3 mb-3">Parturient molestie lectus natoque adipiscing ut sed.</h3>
-                    <p class="mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus mauris, arcu congue semper varius cras tellus scelerisque. Nunc vitae egestas in tempus. Neque mollis.
-                    </p>
-                    <a class="btn-primary" href="#">Voir plus</a>
-                </article> 
+                        <h3 class="title3 mb-3">{{ \Illuminate\Support\Str::limit($post->title, 50, $end = '...')  }}</h3>
+                        <div class="mb-3">
+                            {!! \Illuminate\Support\Str::limit($post->description, 100, $end = '...') !!}
+                        </div>
+                        <a class="btn-primary" href="{{ route('activities.show', $post) }}">Voir plus</a>
+                    </article> 
+                @empty
+                    <p class="text-center block">Il n'y a pas d'articles pour le moment, merci de revenir plus tard.</p>
+                @endforelse
 
             </div>
         </div>

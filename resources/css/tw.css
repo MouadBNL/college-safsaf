@@ -18,7 +18,13 @@
             @apply absolute top-0 left-0 w-full h-full;
         }
         
-
+        .pw{
+            color: white !important;
+        }
+        
+        .pw p{
+            color: white !important;
+        }
     }
 
     /* Titles */

@@ -10,15 +10,19 @@
                     <path d="M25.9996 9.24146C23.4795 9.24146 21.4294 11.2917 21.4294 13.8117C21.4294 16.3316 23.4796 18.3819 25.9996 18.3819C28.5196 18.3819 30.5698 16.3316 30.5698 13.8117C30.5698 11.2917 28.5195 9.24146 25.9996 9.24146ZM25.9996 15.3351C25.1596 15.3351 24.4761 14.6517 24.4761 13.8117C24.4761 12.9716 25.1596 12.2882 25.9996 12.2882C26.8396 12.2882 27.523 12.9716 27.523 13.8117C27.523 14.6517 26.8395 15.3351 25.9996 15.3351Z" fill="white"/>
                 </svg>  
                     
-                <p class="text-white">
+                <div class="text-white editable">
+                    <x-editable href="{{ route('admin.texts.edit', get_Text_id('footer.1')) }}"/>
                     {!! get_text('footer.1') !!}
-                </p>
+                </div>
             </div>
 
             
             <div class="text-white">
     
-                <h2 class="title2 text-white mb-3">{!! get_text('footer.2') !!}</h2>
+                <h2 class="title2 text-white mb-3 editable">
+                    <x-editable href="{{ route('admin.texts.edit', get_Text_id('footer.2')) }}"/>
+                    {!! get_text('footer.2') !!}
+                </h2>
                 
                 <ul class="text-white text-xl">
                     <li>Home</li>
@@ -31,7 +35,10 @@
             
             <div class="text-white">
     
-                <h2 class="title2 text-white mb-3">{!! get_text('footer.3') !!}</h2>
+                <h2 class="title2 text-white mb-3 editable">
+                    <x-editable href="{{ route('admin.texts.edit', get_Text_id('footer.3')) }}"/>
+                    {!! get_text('footer.3') !!}
+                </h2>
                 
                 <ul class="text-white text-xl">
                     <li>Home</li>
@@ -44,7 +51,10 @@
             
             <div class="text-white">
     
-                <h2 class="title2 text-white mb-3">{!! get_text('footer.4') !!}</h2>
+                <h2 class="title2 text-white mb-3 editable">
+                    <x-editable href="{{ route('admin.texts.edit', get_Text_id('footer.4')) }}"/>
+                    {!! get_text('footer.4') !!}
+                </h2>
                 
                 <ul class="text-white text-xl">
                     <li>Home</li>

@@ -26,7 +26,7 @@
                 font-semibold hover:text-primary text-base w-full no-underline lg:w-auto px-2 md:px-4 py-2 md:py-2 md:mx-2 rounded-lg 
                 bg-transparent hover:bg-gray-50 transition
                 "
-                    href="{{ route('home') }}">Accueil
+                    href="{{ route('home') }}">{{ get_page_title(1) }}
                 </a>
 
                  <a class="my-2 py-2 lg:my-0
@@ -34,7 +34,7 @@
                 font-semibold hover:text-primary text-base w-full no-underline lg:w-auto px-2 md:px-4 py-2 md:py-2 md:mx-2 rounded-lg 
                 bg-transparent hover:bg-gray-50 transition
                 "
-                    href="{{ route('activities') }}">Activités
+                    href="{{ route('activities') }}">{{ get_page_title(2) }}
                 </a>
 
                  <a class="my-2 py-2 lg:my-0
@@ -42,7 +42,7 @@
                 font-semibold hover:text-primary text-base w-full no-underline lg:w-auto px-2 md:px-4 py-2 md:py-2 md:mx-2 rounded-lg 
                 bg-transparent hover:bg-gray-50 transition
                 "
-                    href="{{ route('resources') }}">Resources
+                    href="{{ route('resources') }}">{{ get_page_title(3) }}
                 </a>
 
                  <a 

@@ -26,12 +26,14 @@ class ResourceController extends Controller
     public function list(Level $level, Subject $subject)
     {
         $lessons = Lesson::query()
-                    ->whereHas('level', function($q) use($level) {
-                        $q->where('id', $level->id);
-                    })
-                    ->whereHas('subject', function($q) use($subject) {
-                        $q->where('id', $subject->id);
-                    })
+                    ->whereRelation('level', 'id', $level->id)
+                    ->whereRelation('subject', 'id', $subject->id)
+                    // ->whereHas('level', function($q) use($level) {
+                    //     $q->where('id', $level->id);
+                    // })
+                    // ->whereHas('subject', function($q) use($subject) {
+                    //     $q->where('id', $subject->id);
+                    // })
                     ->with('resources')
                     ->get();
         // $resources = Resource::wherehas('')

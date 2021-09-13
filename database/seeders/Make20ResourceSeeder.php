@@ -17,7 +17,7 @@ class Make20ResourceSeeder extends Seeder
         for ($i=0; $i < 20; $i++) { 
             Resource::create([
                 'title' => 'Resource '.$i,
-                'resource_id' => 1,
+                'lesson_id' => 2,
                 'user_id' => 1,
                 'type' => $i%4,
                 'description' => 'test123'

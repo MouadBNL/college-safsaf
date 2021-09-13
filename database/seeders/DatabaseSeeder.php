@@ -18,13 +18,13 @@ class DatabaseSeeder extends Seeder
             RoleUserTableSeeder::class,
         ]);
 
-        Level::create([
-            'label' => '1',
-            'code' => '1'
-        ]);
+        // Level::create([
+        //     'label' => '1',
+        //     'code' => '1'
+        // ]);
 
-        Subject::create([
-            'label' => 'Math'
-        ]);
+        // Subject::create([
+        //     'label' => 'Math'
+        // ]);
     }
 }

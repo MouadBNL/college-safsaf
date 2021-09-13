@@ -21,25 +21,25 @@
 
             <div id="menu" class="w-full lg:w-auto self-end lg:self-center lg:flex flex-col lg:flex-row items-center h-full py-1 pb-4 lg:py-0 lg:pb-0 hidden">
 
-                <a class="
+                <a class="my-2 py-2 lg:my-0
                 {{ (request()->routeIs('home')) ? 'text-dark' : 'text-gray-500' }} 
-                font-semibold hover:text-primary text-base w-full no-underline lg:w-auto md:px-4 py-0 md:py-1 md:mx-2 rounded-lg 
+                font-semibold hover:text-primary text-base w-full no-underline lg:w-auto px-2 md:px-4 py-2 md:py-2 md:mx-2 rounded-lg 
                 bg-transparent hover:bg-gray-50 transition
                 "
                     href="{{ route('home') }}">Accueil
                 </a>
 
-                 <a class="
+                 <a class="my-2 py-2 lg:my-0
                 {{ (request()->routeIs('activities')) ? 'text-dark' : 'text-gray-500' }} 
-                font-semibold hover:text-primary text-base w-full no-underline lg:w-auto md:px-4 py-0 md:py-1 md:mx-2 rounded-lg 
+                font-semibold hover:text-primary text-base w-full no-underline lg:w-auto px-2 md:px-4 py-2 md:py-2 md:mx-2 rounded-lg 
                 bg-transparent hover:bg-gray-50 transition
                 "
                     href="{{ route('activities') }}">Activités
                 </a>
 
-                 <a class="
+                 <a class="my-2 py-2 lg:my-0
                 {{ (request()->routeIs('resources')) ? 'text-dark' : 'text-gray-500' }} 
-                font-semibold hover:text-primary text-base w-full no-underline lg:w-auto md:px-4 py-0 md:py-1 md:mx-2 rounded-lg 
+                font-semibold hover:text-primary text-base w-full no-underline lg:w-auto px-2 md:px-4 py-2 md:py-2 md:mx-2 rounded-lg 
                 bg-transparent hover:bg-gray-50 transition
                 "
                     href="{{ route('resources') }}">Resources
@@ -53,7 +53,7 @@
                 
                 
 
-                {{-- <a class=" {{ (request()->routeIs('hotel')) ? 'text-dark' : 'text-gray-500' }} font-medium hover:text-primary text-base w-full no-underline lg:w-auto md:px-4 py-2 md:py-0 transition-colors"
+                {{-- <a class="my-2 py-2 lg:my-0 {{ (request()->routeIs('hotel')) ? 'text-dark' : 'text-gray-500' }} font-medium hover:text-primary text-base w-full no-underline lg:w-auto md:px-4 py-2 md:py-0 transition-colors"
                     href="{{ route('hotel') }}">L'Hôtel
                 </a>
 

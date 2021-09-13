@@ -4,7 +4,6 @@ window.Collapse = (o) => {
 
     let addStyling = function(){
         if(document.querySelectorAll('[data-name="collapse-styling"]').length > 0){
-            console.log('style already found in page')
             return;
         }
 
@@ -54,7 +53,6 @@ window.Collapse = (o) => {
         addStyling()
 
         btn.addEventListener('click', () => {
-            console.log(active)
             if(active) {
                 content.style.maxHeight = 0
                 active = !active

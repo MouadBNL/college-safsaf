@@ -1,8 +1,11 @@
 <x-layouts.base>
     <x-slot name="css">
-        <div>
-            <link rel="stylesheet" href="{{ asset('css/pages/home.css') }}">
-        </div>
+        <link rel="stylesheet" href="{{ asset('css/pages/home.css') }}">
+        <style>
+            #hero ::after{
+                background: url('{{ get_image("hero-bg", "/images/hero-bg.png") }}') !important;
+            }
+        </style>
     </x-slot>
    {{-- Hero section --}}
    <section id="hero" class="py-36">
@@ -31,7 +34,7 @@
             <div class="mb-4 lg:mb-0 w-1/2 mx-auto lg:w-1/3">
                 {{-- <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-photo-183042379.jpg" alt="Directeur"> --}}
                 <div class="w-full relative ratio-sqr bg-gray-400 rounded-md mb-3">
-                    {{-- <img src="{{ $image->url }}" alt="Image" class="object-cover absolute-full rounded shadow-md"> --}}
+                    <img src="{{ get_image("home.desc") }}" alt="Image" class="object-cover absolute-full rounded shadow-md">
                 </div>
             </div>
 

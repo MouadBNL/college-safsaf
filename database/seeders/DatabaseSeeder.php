@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             RoleUserTableSeeder::class,
             TextSeeder::class,
             PageSeeder::class,
+            ImageSeeder::class
         ]);
 
         // Level::create([

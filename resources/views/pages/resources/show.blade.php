@@ -4,6 +4,26 @@
         <div class="container mx-auto px-4 flex">
 
             <div class="w-full xl:w-2/3">
+                {{-- Breadcrumb --}}
+                <div class="flex items-center text-primary-500 font-semibold mb-4">
+                    <a href="{{ route('resources') }}">Resources</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    <a href="{{ route('resources') }}">{{ $resource->lesson->level->label ?? '' }}</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    <a href="{{ route('resources.list', [
+                        'level' => $resource->lesson->level,
+                        'subject' => $resource->lesson->subject
+                    ]) }}">{{ $resource->lesson->subject->label ?? '' }}</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    <a href="{{ route('resources.show', $resource) }}">{{ $resource->lesson->title ?? '' }}</a>
+
+                </div>
                 <div class="w-full relative ratio-720 bg-gray-400 rounded-md mb-3">
                     <img src="{{ $resource->getImage() }}" alt="Image" class="object-cover absolute-full rounded shadow-md">
                 </div>

@@ -52,7 +52,7 @@ class LessonController extends Controller
 
         $levels = Level::pluck('code', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $subjects = Subject::pluck('label', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $subjects = $lesson->subject()->pluck('label', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $lesson->load('level', 'subject');
 

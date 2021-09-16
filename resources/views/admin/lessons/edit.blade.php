@@ -55,7 +55,51 @@
             </div>
         </form>
     </div>
+    <div style="display: none">
+        <pre id="lvlsbj">{!! json_encode(\App\Models\Level::query()
+            ->with('subjects')
+            ->get()->mapWithKeys(function($item){
+                return  [$item->id => $item->subjects()->pluck('id', 'label')->toArray()];
+            })->toArray()) !!}</pre>
+    </div>
 </div>
+
+@section('scripts')
+<script defer>
+window.levelSubjects = JSON.parse(document.getElementById('lvlsbj').innerHTML);
+$(document).ready(function () {
+    $('#level_id').on('change', function(e) {
+        var val = this.value;
+
+        // Removing old items
+        let values = document.querySelectorAll('#subject_id option')
+        // console.log('removing ', values.length ,' items...')
+        for (let i = 1; i < values.length; i++) {
+            values[i].remove();
+        }
+
+        if(val) {
+            //inseting new items
+            // console.log('inseting new items')
+            let sbj = levelSubjects[val];
+            $('#subject_id').prop('disabled', false);
+            for(k in sbj){
+                // console.log(k, ' => ', sbj[k])
+                var newOption = new Option(k, sbj[k], false, false);
+                $('#subject_id').append(newOption);
+            }
+        } else {
+            // console.log('disabling select')
+            $('#subject_id').prop('disabled', true);
+            $('#subject_id').val('');
+        }
+        $('#subject_id').trigger('change');
+
+    });
+})
+
+</script>
+@endsection
 
 
 

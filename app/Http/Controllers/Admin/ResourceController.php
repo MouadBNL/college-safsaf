@@ -8,7 +8,9 @@ use App\Http\Requests\MassDestroyResourceRequest;
 use App\Http\Requests\StoreResourceRequest;
 use App\Http\Requests\UpdateResourceRequest;
 use App\Models\Lesson;
+use App\Models\Level;
 use App\Models\Resource;
+use App\Models\Subject;
 use Gate;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -33,7 +35,19 @@ class ResourceController extends Controller
 
         $lessons = Lesson::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        return view('admin.resources.create', compact('lessons'));
+        $levels = Level::pluck('code', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $subjects = Subject::pluck('label', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $lessonsFilter = [];
+        foreach (Lesson::all() as $les) {
+            $lessonsFilter[$les->level->id][$les->subject->id][] = [
+                'id' => $les->id,
+                'title' => $les->title,
+            ];
+        }
+
+        return view('admin.resources.create', compact(['lessons', 'lessonsFilter', 'levels', 'subjects']));
     }
 
     public function store(StoreResourceRequest $request)
@@ -57,9 +71,21 @@ class ResourceController extends Controller
     {
         abort_if(Gate::denies('resource_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $lessons = Lesson::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $lessons = Lesson::pluck('title', 'id', 'level_id')->prepend(trans('global.pleaseSelect'), '');
 
-        return view('admin.resources.edit', compact('resource', 'lessons'));
+        $levels = Level::pluck('code', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $subjects = Subject::pluck('label', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $lessonsFilter = [];
+        foreach (Lesson::all() as $les) {
+            $lessonsFilter[$les->level->id][$les->subject->id][] = [
+                'id' => $les->id,
+                'title' => $les->title,
+            ];
+        }
+
+        return view('admin.resources.edit', compact('resource', 'lessons', 'lessonsFilter', 'levels', 'subjects'));
     }
 
     public function update(UpdateResourceRequest $request, Resource $resource)

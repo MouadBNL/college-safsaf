@@ -109,3 +109,8 @@ html{
 .open .hamburger__middle-bun {
   opacity: 0;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
